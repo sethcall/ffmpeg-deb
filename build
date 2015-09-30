@@ -13,6 +13,9 @@ DEB_OUT=`pwd`/deb
 
 # build yasm
 
+mkdir -p $SOURCES
+mkdir -p $DEB_OUT
+
 cd $SOURCES
 wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
 tar xzvf yasm-1.3.0.tar.gz
