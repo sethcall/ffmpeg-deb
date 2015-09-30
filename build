@@ -9,6 +9,7 @@ sudo apt-get -y install autoconf automake build-essential libass-dev libfreetype
 SOURCES=`pwd`/ffmpeg_sources
 BUILD=`pwd`/ffmpeg_build
 BIN=`pwd`/bin
+DEB_OUT=`pwd`/deb
 
 # build yasm
 
@@ -77,6 +78,5 @@ gem list -i fpm || sudo gem install fpm
 # take everything in $BIN, and slap it in /usr/local/bin
 cd $BIN
 
-fpm -s dir -t deb -n ffmpeg-2.8 -v 2.8.0  --prefix /usr/local/bin \
-  -p ffmpeg-2.8.deb .
+fpm -s dir -t deb -n ffmpeg-2.8 -v 2.8.0  --prefix /usr/local/bin -p "$DEB_OUT/ffmpeg-2.8.deb" .
 
