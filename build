@@ -81,5 +81,5 @@ gem list -i fpm || sudo gem install fpm
 # take everything in $BIN, and slap it in /usr/local/bin
 cd $BIN
 
-fpm -s dir -t deb -n ffmpeg-2.8 -v 2.8.0  --prefix /usr/local/bin -p "$DEB_OUT/ffmpeg-2.8.deb" -d libxcb-shm0 -d libxcb-xfixes0 -d libxcb-shape0 -d libass4 -d libvdpau1 .
+fpm -s dir -t deb -n ffmpeg-2.8 -v 2.8.0  --prefix /usr/local/bin -p "$DEB_OUT/ffmpeg-2.8.deb" -d libxcb-shm0 -d libxcb-xfixes0 -d libxcb-shape0 -d libass4 -d libvdpau1 -d libsdl1.2debian .
 
